@@ -1,0 +1,43 @@
+public class Dados{
+    private String nome;
+    private double salario;
+    private double taxa;
+    private double aumentoper;
+   
+    public void SetNome(String nome){
+        this.nome = nome;
+    }
+    public void SetSalario(double salario){
+        this.salario = salario;
+    }  
+    public void SetTaxa(double taxa){
+        this.taxa = taxa;
+    }
+    public void SetAumentoPer(double aumentoper){
+        this.aumentoper = aumentoper;
+    }
+   
+    public double novosalario(){
+        return (aumentoper*salario) + salario;
+    }
+    public double  liquido(){
+        return salario - taxa;
+    }
+    void status(){
+        System.out.println("O salário atual de" + this.nome + "é de" + this.salario);
+        System.out.println("O salário liquido, atualmente, é de: " + this.liquido());
+        System.out.println("O novo salário será de: " + this.novosalario());
+    }
+    
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+public class TesteDados{
+    public static void main(String[] args) {
+        Dados d1 = new Dados;
+        d1.SetNome(nome);
+        d1.SetSalario(salario);
+        d1.SetTaxa(taxa);
+        d1.status();
+    }
+
+}
