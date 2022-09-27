@@ -1,0 +1,10 @@
+public class Conversor {
+       static double getIOF(double valor) {
+              return valor * (0.06);
+       }
+
+       static double dolarparareal(double valor, double valordolar) {
+              double convertido = valor * valodolar;
+              return (convertido) + getIOF(convertido);
+       }
+}
