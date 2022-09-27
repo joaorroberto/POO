@@ -1,0 +1,35 @@
+public class Area{
+    private double altura;
+    private double largura;
+
+    void setaltura(double altura){
+        this.altura = altura;
+    }
+    void setlargura(double largura){
+        this.largura = largura;
+    }
+    double area(){
+        return altura * largura;
+    }
+    double perimetro(){
+        return (altura*altura) + (largura*largura);
+    }
+    double diagonal(){
+        return Math.sqrt(altura*altura + largura*largura);
+    }
+    void status(){
+        System.out.println("A area do retangulo é de " + this.area());
+        System.out.println("O perimetro do retangulo é de "+ this.perimetro());
+        System.out.println("A diagonal do retangulo é " + this.diagonal());
+    }
+}
+
+--------------------------------------------------------------------------------------------------------
+public class TestarArea {
+    public static void main(String[] args) {
+        Area r1 = new Area();
+        r1.setaltura(2.5);
+        r1.setlargura(2.5);
+        r1.status();
+    }
+}
